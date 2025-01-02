@@ -210,6 +210,14 @@ public:
     }
 };
 // This code was added previously in `loadAccountsFromFile`, it's for handling empty lines.
+void displayMenu() {
+    std::cout << "\n--- Bank Management System Menu ---\n";
+    std::cout << "1. Create Account\n";
+    std::cout << "2. Deposit Money\n";
+    std::cout << "3. Withdraw Money\n";
+    std::cout << "4. Display All Accounts\n";
+    std::cout << "5. Exit\n";
+}
 
 
 
