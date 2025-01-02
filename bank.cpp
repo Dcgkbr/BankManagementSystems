@@ -140,6 +140,24 @@ public:
         std::cout << "Account not found!" << std::endl;
     }
 };
+class BankManagementSystem {
+private:
+    std::vector<BankAccount> accounts;
+
+public:
+    void displayAccounts() const {
+        if (accounts.empty()) {
+            std::cout << "No accounts available." << std::endl;
+            return;
+        }
+
+        for (const auto& account : accounts) {
+            account.displayAccount();
+            std::cout << "-------------------------------" << std::endl;
+        }
+    }
+};
+
 
 
 
