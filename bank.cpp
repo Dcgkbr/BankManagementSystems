@@ -41,4 +41,20 @@ public:
         std::cout << "Deposited: " << amount << "\nNew Balance: " << balance << std::endl;
     }
 };
+class BankAccount {
+public:
+    // Existing members...
+
+    // Method to withdraw money from the account
+    bool withdraw(double amount) {
+        if (amount > balance) {
+            std::cout << "Insufficient funds!" << std::endl;
+            return false;
+        } else {
+            balance -= amount;
+            std::cout << "Withdrawn: " << amount << "\nNew Balance: " << balance << std::endl;
+            return true;
+        }
+    }
+};
 
