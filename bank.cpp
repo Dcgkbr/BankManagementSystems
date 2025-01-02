@@ -255,6 +255,8 @@ int main() {
 
     return 0; // Exit the program
 }
+std::cin.ignore(); // Already added after each input in `main` function
+
 
 
 
