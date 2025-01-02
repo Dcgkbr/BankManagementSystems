@@ -57,4 +57,16 @@ public:
         }
     }
 };
+class BankAccount {
+public:
+    // Existing members...
+
+    // Method to display account details
+    void displayAccount() const {
+        std::cout << "Account Holder: " << name
+                  << "\nAccount Number: " << accountNumber
+                  << "\nBalance: " << balance << std::endl;
+    }
+};
+
 
