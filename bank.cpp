@@ -260,6 +260,11 @@ std::cout << "Account created successfully!" << std::endl;  // Already added in 
 std::cout << "Account not found!" << std::endl;  // Already included in the `withdraw` function
 std::cout << "Account not found!" << std::endl;  // Already included in the `withdraw` function
 std::cout << "Insufficient funds!" << std::endl;  // Already in `withdraw` method
+// Add formatting logic for better display
+std::cout << std::setw(20) << account.name 
+          << std::setw(20) << account.accountNumber 
+          << std::setw(10) << account.balance 
+          << std::endl;
 
 
 
