@@ -31,3 +31,14 @@ public:
     BankAccount(std::string name, std::string accountNumber, double initialDeposit)
         : name(name), accountNumber(accountNumber), balance(initialDeposit) {}
 };
+class BankAccount {
+public:
+    // Existing members...
+
+    // Method to deposit money into the account
+    void deposit(double amount) {
+        balance += amount;
+        std::cout << "Deposited: " << amount << "\nNew Balance: " << balance << std::endl;
+    }
+};
+
