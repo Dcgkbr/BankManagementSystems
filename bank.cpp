@@ -90,5 +90,30 @@ public:
         std::cout << "Account created successfully!" << std::endl;
     }
 };
+class BankManagementSystem {
+private:
+    std::vector<BankAccount> accounts;
+
+public:
+    void deposit() {
+        std::string accountNumber;
+        double amount;
+
+        std::cout << "Enter your account number: ";
+        std::getline(std::cin, accountNumber);
+        
+        for (auto& account : accounts) {
+            if (account.accountNumber == accountNumber) {
+                std::cout << "Enter amount to deposit: ";
+                std::cin >> amount;
+                account.deposit(amount);
+                return;
+            }
+        }
+        
+        std::cout << "Account not found!" << std::endl;
+    }
+};
+
 
 
