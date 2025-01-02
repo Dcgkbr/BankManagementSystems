@@ -157,6 +157,23 @@ public:
         }
     }
 };
+class BankManagementSystem {
+private:
+    std::vector<BankAccount> accounts;
+
+public:
+    void saveAccountsToFile() const {
+        std::ofstream outFile("accounts.txt");
+        
+        for (const auto& account : accounts) {
+            outFile << account.name << "," 
+                    << account.accountNumber << "," 
+                    << account.balance << "\n";
+        }
+        
+        outFile.close();
+    }
+};
 
 
 
