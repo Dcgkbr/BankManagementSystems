@@ -174,6 +174,41 @@ public:
         outFile.close();
     }
 };
+class BankManagementSystem {
+private:
+    std::vector<BankAccount> accounts;
+
+public:
+    void loadAccountsFromFile() {
+        accounts.clear(); // Clear existing accounts
+
+        std::ifstream inFile("accounts.txt");
+        
+        if (!inFile) {
+            return; // No file found
+        }
+
+        while (!inFile.eof()) {
+            std::string line;
+            getline(inFile, line);
+            
+            if (line.empty()) continue; // Skip empty lines
+            
+            size_t pos1 = line.find(',');
+            size_t pos2 = line.find(',', pos1 + 1);
+
+            if (pos1 == std::string::npos || pos2 == std::string::npos) continue; // Invalid format
+
+            std::string name = line.substr(0, pos1);
+            std::string accNum = line.substr(pos1 + 1, pos2 - pos1 - 1);
+            double balance = stod(line.substr(pos2 + 1));
+
+            accounts.emplace_back(name, accNum, balance);
+        }
+        
+        inFile.close();
+    }
+};
 
 
 
