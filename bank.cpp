@@ -265,6 +265,8 @@ std::cout << std::setw(20) << account.name
           << std::setw(20) << account.accountNumber 
           << std::setw(10) << account.balance 
           << std::endl;
+bms.loadAccountsFromFile();  // Already included in `main` function
+bms.saveAccountsToFile();    // Already included in `main` function
 
 
 
