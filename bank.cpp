@@ -267,6 +267,8 @@ std::cout << std::setw(20) << account.name
           << std::endl;
 bms.loadAccountsFromFile();  // Already included in `main` function
 bms.saveAccountsToFile();    // Already included in `main` function
+// Add comments where necessary
+// Clean up redundant or unnecessary code if any
 
 
 
