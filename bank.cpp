@@ -209,6 +209,7 @@ public:
         inFile.close();
     }
 };
+// This code was added previously in `loadAccountsFromFile`, it's for handling empty lines.
 
 
 
