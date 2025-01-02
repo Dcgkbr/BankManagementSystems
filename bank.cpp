@@ -218,6 +218,43 @@ void displayMenu() {
     std::cout << "4. Display All Accounts\n";
     std::cout << "5. Exit\n";
 }
+int main() {
+    BankManagementSystem bms;
+    bms.loadAccountsFromFile();
+
+    int choice;
+    do {
+        displayMenu();
+        
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+        std::cin.ignore(); // Clear input buffer
+
+        switch (choice) {
+            case 1:
+                bms.createAccount();
+                break;
+            case 2:
+                bms.deposit();
+                break;
+            case 3:
+                bms.withdraw();
+                break;
+            case 4:
+                bms.displayAccounts();
+                break;
+            case 5:
+                bms.saveAccountsToFile(); // Save accounts before exiting
+                break;
+            default:
+                if (choice != 5) 
+                    std::cout << "Invalid choice! Please try again.\n";
+                break;
+        }
+    } while (choice != 5);
+
+    return 0; // Exit the program
+}
 
 
 
