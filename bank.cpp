@@ -68,5 +68,27 @@ public:
                   << "\nBalance: " << balance << std::endl;
     }
 };
+class BankManagementSystem {
+private:
+    std::vector<BankAccount> accounts;
+
+public:
+    void createAccount() {
+        std::string name, accountNumber;
+        double initialDeposit;
+
+        std::cout << "Enter your name: ";
+        std::getline(std::cin, name);
+        std::cout << "Enter your account number: ";
+        std::getline(std::cin, accountNumber);
+        std::cout << "Enter initial deposit: ";
+        std::cin >> initialDeposit;
+        std::cin.ignore(); // Clear input buffer
+
+        BankAccount newAccount(name, accountNumber, initialDeposit);
+        accounts.push_back(newAccount);
+        std::cout << "Account created successfully!" << std::endl;
+    }
+};
 
 
